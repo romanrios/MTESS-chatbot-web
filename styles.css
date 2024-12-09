@@ -12,7 +12,7 @@ body {
 .chat-container {
     width: 90%; /* Usa un porcentaje para la anchura */
     max-width: 500px; /* Limita el tamaño en pantallas grandes */
-    height: 90%; /* Adapta la altura al tamaño de la pantalla */
+    height: 80%; /* Adapta la altura al tamaño de la pantalla */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

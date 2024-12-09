@@ -2,7 +2,7 @@ let flows;
 
 document.addEventListener("DOMContentLoaded", async () => {
     flows = await fetch("flows.json").then(response => response.json());
-    startChat("inicio");
+    startChat("inicioBienvenida");
 });
 
 function startChat(flowName) {
@@ -22,7 +22,7 @@ function displayMessage(sender, message) {
     const chatBox = document.getElementById("chat-box");
     const messageElement = document.createElement("div");
     messageElement.className = `message ${sender}-message`;
-    messageElement.textContent = message;
+    messageElement.innerHTML = message;
     chatBox.appendChild(messageElement);
     chatBox.scrollTop = chatBox.scrollHeight;
 
