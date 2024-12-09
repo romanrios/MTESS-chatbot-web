@@ -89,7 +89,7 @@
     },
     "otra": {
         "mensaje": [
-            "Para realizar otra consulta ingresá al siguiente <a href='https://wa.me/5493425330074'>Enlace</a>"
+            "Para realizar otra consulta ingresá al siguiente <a href='https://wa.me/5493425330074' target='_blank'>Enlace</a>"
         ],
         "opciones": [
             {
