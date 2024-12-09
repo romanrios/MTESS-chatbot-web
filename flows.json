@@ -16,6 +16,10 @@
             {
                 "text": "Prácticas Laborales Formativas",
                 "next": "practicas"
+            },
+            {
+                "text": "Otra consulta",
+                "next": "otra"
             }
         ]
     },
@@ -75,13 +79,23 @@
         "mensaje": [
             "A través del programa de <b>Prácticas Laborales Formativas</b> los santafesinos podrán transitar una instancia de capacitación en un ámbito de trabajo real durante un plazo determinado, adquiriendo así conocimientos, competencias y habilidades que mejoren sus condiciones de empleabilidad, mientras perciben por ello un estímulo económico equivalente al 50% del Salario Mínimo Vital y Móvil a cargo del Gobierno de la Provincia de Santa Fe, por un período de hasta 6 meses.",
             "Si tenés una empresa, un comercio o un emprendimiento y querés solicitar el programa Prácticas Laborales Formativas ingresá en este <a href='https://www.santafe.gob.ar/trabdigno/login target='_blank'>Enlace</a>"
-    ],
+        ],
         "opciones": [
             {
                 "text": "Volver",
                 "next": "inicio"
             }
         ]
-    }   
-    
+    },
+    "otra": {
+        "mensaje": [
+            "Para realizar otra consulta ingresá al siguiente <a href='https://wa.me/5493425330074'>Enlace</a>"
+        ],
+        "opciones": [
+            {
+                "text": "Volver",
+                "next": "inicio"
+            }
+        ]
+    }
 }
