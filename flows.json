@@ -1,0 +1,50 @@
+{
+    "inicio": {
+        "mensaje": "Hola soy el chat bot, ¿Cómo puedo ayudarte?",
+        "opciones": [
+            {"text": "Opción 1", "next": "opcion1"},
+            {"text": "Opción 2", "next": "opcion2"},
+            {"text": "Opción 3", "next": "opcion3"}
+        ]
+    },
+    "opcion1": {
+        "mensaje": ["Bienvenido a la opción 1. ¿Cómo deseas continuar?","mensaje 2!!!","mensaje 3!!!","mensaje 4!!!","mensaje 5!!!"],
+        "opciones": [
+            {"text": "Sub-Opción 1", "next": "subopcion1"},
+            {"text": "Sub-Opción 2", "next": "subopcion2"},
+            {"text": "Volver", "next": "inicio"}
+        ]
+    },
+    "opcion2": {
+        "mensaje": "Bienvenido a la opción 2. ¿Cómo deseas continuar?",
+        "opciones": [
+            {"text": "Sub-Opción 1", "next": "subopcion1"},
+            {"text": "Sub-Opción 2", "next": "subopcion2"},
+            {"text": "Volver", "next": "inicio"}
+        ]
+    },
+    "opcion3": {
+        "mensaje": "Bienvenido a la opción 3. ¿Cómo deseas continuar?",
+        "opciones": [
+            {"text": "Sub-Opción 1", "next": "subopcion1"},
+            {"text": "Sub-Opción 2", "next": "subopcion2"},
+            {"text": "Volver", "next": "inicio"}
+        ]
+    },
+    "subopcion1": {
+        "mensaje": "Bienvenido a la Subopción 1. ¿Cómo deseas continuar?",
+        "opciones": [
+            {"text": "Sub-Opción 1", "next": "subopcion1"},
+            {"text": "Sub-Opción 2", "next": "subopcion2"},
+            {"text": "Volver", "next": "inicio"}
+        ]
+    },
+    "subopcion2": {
+        "mensaje": "Bienvenido a la Subopción 1. ¿Cómo deseas continuar?",
+        "opciones": [
+            {"text": "Sub-Opción 1", "next": "subopcion1"},
+            {"text": "Sub-Opción 2", "next": "subopcion2"},
+            {"text": "Volver", "next": "inicio"}
+        ]
+    }
+}
