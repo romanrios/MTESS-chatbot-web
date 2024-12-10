@@ -28,7 +28,7 @@ function displayMessage(sender, message) {
 
     // Añadir animación para los mensajes
     if (sender == "user") {
-        messageElement.classList.add("visible");
+        messageElement.classList.add("transparent");
     } else {
         setTimeout(() => { messageElement.classList.add("visible"); }, 1000);
     }
@@ -69,4 +69,59 @@ function clearOptions() {
     const chatBox = document.getElementById("chat-box");
     const options = chatBox.querySelectorAll(".option");
     options.forEach(option => option.remove());
+}
+
+
+
+
+// SEND MESSAGE
+
+// Agregar evento para enviar mensaje con Enter
+document.getElementById("user-input").addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+});
+
+function sendMessage() {
+    const input = document.getElementById("user-input");
+    const userMessage = input.value.trim().toLowerCase(); // Convertir a minúsculas para comparación
+
+    // Validar que el mensaje no esté vacío
+    if (userMessage === "") return;
+
+    // Mostrar el mensaje del usuario en el chat
+    displayMessage("user", userMessage);
+
+    // Limpiar el campo de entrada
+    input.value = "";
+
+    // Eliminar las opciones actuales
+    clearOptions();
+
+    // Verificar si el mensaje contiene "hola"
+    if (userMessage.includes("hola")) {
+        // Mostrar saludo personalizado
+        displayMessage("bot", "¡Hola! Es un gusto ayudarte. Si bien no puedo responder consultas personalizadas, cuento con mucha información útil que puedes explorar seleccionando las opciones disponibles.");
+        startChat("inicio");
+        return; // Terminar ejecución después de mostrar saludo y opciones
+    }
+
+    // Buscar flujo de respuesta o usar el predeterminado
+    const flow = flows["defaultResponse"]; // Cambiar según lógica específica si es necesario
+
+    if (flow) {
+        if (Array.isArray(flow.mensaje)) {
+            displayMultipleMessages(flow.mensaje, 0, () => {
+                displayOptions(flow.opciones);
+            });
+        } else {
+            displayMessage("bot", flow.mensaje);
+            displayOptions(flow.opciones);
+        }
+    } else {
+        // Si no existe el flujo predeterminado, ofrece las opciones del inicio
+        displayMessage("bot", "Si bien no puedo responder consultas personalizadas, cuento con mucha información útil que puedes explorar seleccionando las opciones disponibles.");
+        startChat("inicio");
+    }
 }
