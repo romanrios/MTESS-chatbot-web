@@ -35,15 +35,40 @@ body {
     /* Limita la altura en pantallas grandes */
 }
 
+.banner{
+    font-size: 16px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.banner_img{
+    width: 50px;
+    border-radius: 100%;
+}
+
+.banner p{
+    margin: 0;
+    padding: 0;
+}
+
+.banner p:nth-of-type(1){
+    font-weight: 500;
+}
+
+.banner p:nth-of-type(2){
+    font-size: 12px;
+
+}
+
 .chat-container {
-    width: 90%;
-    /* Usa un porcentaje para la anchura */
     max-width: 500px;
     /* Limita el tamaño en pantallas grandes */
-    height: 80%;
+    height: 100%;
     /* Adapta la altura al tamaño de la pantalla */
     background-color: var(--lighter-grey);
-    border-radius: 10px;
+    /* border-radius: 10px; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -58,13 +83,15 @@ body {
     overflow-y: auto;
     padding: 12px;
     border-bottom: 1px solid var(--grey);
+    border-top: 1px solid var(--grey);
+
 }
 
 
 .input-container {
     display: flex;
     padding: 10px;
-    gap: 10px;
+    gap: 6px;
     /* Espaciado uniforme entre elementos */
 }
 
@@ -87,14 +114,16 @@ input:focus {
 }
 
 button {
-    font-size: 16px;
-    padding: 10px;
+    padding: 10px 16px;
     background: var(--light-blue);
-    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+}
+
+button img{
+    width: 16px;
 }
 
 button:hover {
