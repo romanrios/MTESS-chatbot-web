@@ -91,7 +91,7 @@ function sendMessage() {
     if (userMessage === "") return;
 
     // Mostrar el mensaje del usuario en el chat
-    displayMessage("user", userMessage);
+    displayMessage("user", input.value);
 
     // Limpiar el campo de entrada
     input.value = "";
