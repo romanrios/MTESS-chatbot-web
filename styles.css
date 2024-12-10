@@ -20,6 +20,7 @@
 
 a {
     color: var(--blue);
+    text-decoration: none;
 }
 
 body {
@@ -75,7 +76,8 @@ input {
     padding: 10px;
     border: 1px solid var(--grey);
     border-radius: 5px;
-    width: 100%;;
+    width: 100%;
+    ;
 
 }
 
@@ -145,11 +147,15 @@ button:hover {
     opacity: 0;
     transform: translateY(20px);
     font-weight: 500;
+    pointer-events: none;
+    /* Desactiva interacción */
 }
 
 .option.visible {
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
+    /* Desactiva interacción */
 }
 
 .option:hover {
