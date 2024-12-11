@@ -89,7 +89,7 @@ export const flows = {
       { text: "¿Cómo me contacta una empresa que está interesada en mi persona?", next: "empleojoven_postulantes_12" },
       { text: "¿Dónde puedo ver los avisos a los que me postulé?", next: "empleojoven_postulantes_13" },
       { text: "¿Puedo participar de EmpleoJoven más de una vez?", next: "empleojoven_postulantes_14" },
-      { text: "Volver", next: "empleojoven" }
+      { text: "Volver a Empleo Joven", next: "empleojoven" }
     ]
   },
   empleojoven_postulantes_01: {
@@ -251,7 +251,7 @@ export const flows = {
       { text: "Si el empleado que contrato cumple 30 durante los 6 meses, ¿puede participar?", next: "empleojoven_empresas_14" },
       { text: "¿Qué pasa si el empleado no cumple las expectativas, puedo desvincularlo antes de los 6 meses?", next: "empleojoven_empresas_15" },
       { text: "¿Se puede prorrogar el beneficio?", next: "empleojoven_empresas_16" },
-      { text: "Volver", next: "empleojoven" },
+      { text: "Volver a Empleo Joven", next: "empleojoven" },
     ]
   },
   empleojoven_empresas_01: {
