@@ -84,7 +84,7 @@ body {
     padding: 12px;
     border-bottom: 1px solid var(--grey);
     border-top: 1px solid var(--grey);
-
+    scroll-behavior: smooth;
 }
 
 
