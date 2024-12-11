@@ -81,14 +81,13 @@ export const flows = {
       // { text: "¿Se pueden modificar los datos de mi CV?", next: "empleojoven_postulantes_04" },
       // { text: "¿Se pueden agregar más datos a mi CV?", next: "empleojoven_postulantes_05" },
       // { text: "¿El usuario tiene fecha de caducidad?", next: "empleojoven_postulantes_06" },
-      { text: "Los datos publicados, ¿son de acceso público?", next: "empleojoven_postulantes_07" },
+      // { text: "Los datos publicados, ¿son de acceso público?", next: "empleojoven_postulantes_07" },
       { text: "¿Cómo busco un aviso?", next: "empleojoven_postulantes_08" },
       { text: "¿Tengo que estar registrado para ver los detalles de un aviso?", next: "empleojoven_postulantes_09" },
-      { text: "¿Dónde puedo ver los avisos a los que me postulé?", next: "empleojoven_postulantes_10" },
-      { text: "¿Cómo me contacto con una empresa que publicó un aviso?", next: "empleojoven_postulantes_11" },
-      { text: "¿Cómo me contacta una empresa que está interesada en mi persona?", next: "empleojoven_postulantes_12" },
-      { text: "¿Dónde puedo ver los avisos a los que me postulé?", next: "empleojoven_postulantes_13" },
-      { text: "¿Puedo participar de EmpleoJoven más de una vez?", next: "empleojoven_postulantes_14" },
+      // { text: "¿Dónde puedo ver los avisos a los que me postulé?", next: "empleojoven_postulantes_10" },
+      // { text: "¿Cómo me contacto con una empresa que publicó un aviso?", next: "empleojoven_postulantes_11" },
+      // { text: "¿Cómo me contacta una empresa que está interesada en mi persona?", next: "empleojoven_postulantes_12" },
+      { text: "¿Puedo participar de Empleo Joven más de una vez?", next: "empleojoven_postulantes_13" },
       { text: "Volver a Empleo Joven", next: "empleojoven" }
     ]
   },
@@ -155,15 +154,15 @@ export const flows = {
   //     { text: VOLVER, next: "inicio" }
   //   ]
   // },
-  empleojoven_postulantes_07: {
-    mensaje: [
-      "Portal de Empleo asegura a los usuarios que se respetará en todo momento la confidencialidad de sus datos conforme a lo fijado por la Ley 25326 de Protección de Datos Personales y su reglamentación. Por tanto, los datos de los usuarios no serán conocidos por terceros ni exhibidos públicamente en ningún medio."
-    ],
-    opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
+  // empleojoven_postulantes_07: {
+  //   mensaje: [
+  //     "Portal de Empleo asegura a los usuarios que se respetará en todo momento la confidencialidad de sus datos conforme a lo fijado por la Ley 25326 de Protección de Datos Personales y su reglamentación. Por tanto, los datos de los usuarios no serán conocidos por terceros ni exhibidos públicamente en ningún medio."
+  //   ],
+  //   opciones: [
+  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+  //     { text: VOLVER, next: "inicio" }
+  //   ]
+  // },
   empleojoven_postulantes_08: {
     mensaje: [
       "Para conocer la oferta de puestos vigentes, ingresá a la sección <b>Busco Trabajo</b>. Podés buscar avisos filtrando la información por localidad o puesto o ver la información completa sin agregar ningún filtro. Una vez que se presiona el botón <b>Buscar</b>, se mostrarán los resultados de la búsqueda.",
@@ -183,43 +182,34 @@ export const flows = {
       { text: VOLVER, next: "inicio" }
     ]
   },
-  empleojoven_postulantes_10: {
-    mensaje: [
-      "Ingresando con tu usuario y contraseña, hacé click en tu nombre y luego en la opción <b>Panel de Control</b>. Allí tendrás un seguimiento de todos los puestos a los que te postulaste por medio del sitio."
-    ],
-    opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
-  empleojoven_postulantes_11: {
-    mensaje: [
-      "Una vez que identifiques un puesto que te interesa, debajo de los detalles tendrás el botón <b>Postularme</b>, si lo presionás el sistema le envía un email a la empresa que lo publicó; indicándole tu postulación y adjuntando tu CV."
-    ],
-    opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
-  empleojoven_postulantes_12: {
-    mensaje: [
-      "Una empresa se puede contactar mediante email o telefónicamente, si está interesada en tu perfil laboral para una eventual entrevista."
-    ],
-    opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
+  // empleojoven_postulantes_10: {
+  //   mensaje: [
+  //     "Ingresando con tu usuario y contraseña, hacé click en tu nombre y luego en la opción <b>Panel de Control</b>. Allí tendrás un seguimiento de todos los puestos a los que te postulaste por medio del sitio."
+  //   ],
+  //   opciones: [
+  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+  //     { text: VOLVER, next: "inicio" }
+  //   ]
+  // },
+  // empleojoven_postulantes_11: {
+  //   mensaje: [
+  //     "Una vez que identifiques un puesto que te interesa, debajo de los detalles tendrás el botón <b>Postularme</b>, si lo presionás el sistema le envía un email a la empresa que lo publicó; indicándole tu postulación y adjuntando tu CV."
+  //   ],
+  //   opciones: [
+  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+  //     { text: VOLVER, next: "inicio" }
+  //   ]
+  // },  
+  // empleojoven_postulantes_12: {
+  //   mensaje: [
+  //     "Una empresa se puede contactar mediante email o telefónicamente, si está interesada en tu perfil laboral para una eventual entrevista."
+  //   ],
+  //   opciones: [
+  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+  //     { text: VOLVER, next: "inicio" }
+  //   ]
+  // },
   empleojoven_postulantes_13: {
-    mensaje: [
-      "Una empresa se puede contactar mediante email o telefónicamente, si está interesada en tu perfil laboral para una eventual entrevista."
-    ],
-    opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
-  empleojoven_postulantes_14: {
     mensaje: [
       "No. El periodo máximo en el que podés permanecer dentro del programa es de 6 meses, o 12 si tenes discapacidad."
     ],
@@ -247,10 +237,10 @@ export const flows = {
       { text: "Si soy monotributista, ¿puedo participar?", next: "empleojoven_empresas_10" },
       { text: "Si no tengo ningún empleado registrado aún, ¿puedo participar?", next: "empleojoven_empresas_11" },
       { text: "¿Hay límite de cantidad de empleados que se pueden adherir?", next: "empleojoven_empresas_12" },
-      { text: "¿Cuánto demoran los reintegros?", next: "empleojoven_empresas_13" },
+      // { text: "¿Cuánto demoran los reintegros?", next: "empleojoven_empresas_13" },
       { text: "Si el empleado que contrato cumple 30 durante los 6 meses, ¿puede participar?", next: "empleojoven_empresas_14" },
       { text: "¿Qué pasa si el empleado no cumple las expectativas, puedo desvincularlo antes de los 6 meses?", next: "empleojoven_empresas_15" },
-      { text: "¿Se puede prorrogar el beneficio?", next: "empleojoven_empresas_16" },
+      // { text: "¿Se puede prorrogar el beneficio?", next: "empleojoven_empresas_16" },
       { text: "Volver a Empleo Joven", next: "empleojoven" },
     ]
   },
@@ -375,15 +365,15 @@ export const flows = {
       { text: VOLVER, next: "inicio" }
     ]
   },
-  empleojoven_empresas_13: {
-    mensaje: [
-      "Una vez que la empresa completa la documentación requerida para el reintegro, se estima que la demora es de 20 días hábiles."
-    ],
-    opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
+  // empleojoven_empresas_13: {
+  //   mensaje: [
+  //     "Una vez que la empresa completa la documentación requerida para el reintegro, se estima que la demora es de 20 días hábiles."
+  //   ],
+  //   opciones: [
+  //     { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+  //     { text: VOLVER, next: "inicio" }
+  //   ]
+  // },
   empleojoven_empresas_14: {
     mensaje: [
       "Si. Debe tener entre 18 y 30 al momento de la adhesión."
@@ -402,15 +392,15 @@ export const flows = {
       { text: VOLVER, next: "inicio" }
     ]
   },
-  empleojoven_empresas_16: {
-    mensaje: [
-      "No se puede prorrogar. La duración es la seleccionada al momento de la adhesión. Sí se puede presentar un nueva en cualquier momento."
-    ],
-    opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
+  // empleojoven_empresas_16: {
+  //   mensaje: [
+  //     "No se puede prorrogar. La duración es la seleccionada al momento de la adhesión. Sí se puede presentar un nueva en cualquier momento."
+  //   ],
+  //   opciones: [
+  //     { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+  //     { text: VOLVER, next: "inicio" }
+  //   ]
+  // },
 
 
 
