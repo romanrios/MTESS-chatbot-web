@@ -49,8 +49,30 @@ export const flows = {
     ],
     opciones: [
       { text: "¿Qué es Empleo Joven?", next: "empleojoven_quees" },
+      { text: "Requisitos Trabajadores", next: "empleojoven_requisitos_trabajadores" },
+      { text: "Requisitos Empresarios", next: "empleojoven_requisitos_empresarios" },
       { text: "Preguntas Frecuentes Postulantes", next: "empleojoven_postulantes" },
       { text: "Preguntas Frecuentes Empresas", next: "empleojoven_empresas" },
+      { text: VOLVER, next: "inicio" }
+    ]
+  },
+
+  empleojoven_requisitos_trabajadores: {
+    mensaje: [
+      "• Personas entre 18 y 30 años, inclusive.<br>• Residan en forma permanente en la Provincia de Santa Fe.<br>• Hayan completado el nivel secundario formal obligatorio, o se encuentren terminando sus estudios, o suscriban, en su caso, compromiso de continuación de sus estudios.<br>• La persona se debe encontrar en situación de desempleo.<br>• Trabajadores con discapacidad: Deben contar con el certificado que se expide en el marco de la Ley Nº 22.431."
+    ],
+    opciones: [
+      { text: "Volver a Empleo Joven", next: "empleojoven"},
+      { text: VOLVER, next: "inicio" }
+    ]
+  },
+
+  empleojoven_requisitos_empresarios: {
+    mensaje: [
+      "• Empleadores del sector privado de cualquier actividad económica.<br>• No tengan sanciones en los últimos dos años por violación a la normativa laboral. Salvo, que teniéndolas las hayan cancelado o bien tengan un convenio de pago vigente. <br>• No hayan realizado despidos colectivos dentro de los seis meses previos a la solicitud de adhesión. <br> • No hayan tenido con el beneficiario relación laboral previa en los últimos tres (3) meses.<br>• No se encuentren cobrando beneficios de otros organismos relacionados al trabajador beneficiario por el presente programa.<br>• El empleador deberá estar inscripto y con sus datos actualizados en el registro de SIPAF que posee el MTEySS. A tal efecto, se deberá cumplimentar el <a href='https://www.santafe.gob.ar/simtyss/portalempleo/pdfs/Formulario_Inscripci%C3%B3n_Actualizaci%C3%B3n_SIPAF_2024.pdf?v=20240228' target='_blank'>formulario</a> de SIPAF junto con la documentación que se detalla en el presente <a href='https://www.santafe.gob.ar/simtyss/portalempleo/pdfs/Instructivo_SIPAF_2024.pdf' target='_blank'>instructivo</a>.<br>• <a href='https://www.santafe.gob.ar/simtyss/portalempleo/pdfs/Terminos_condiciones_EmpleoJoven.pdf?v=20240227' target='_blank'>Leer términos y condiciones completo</a>"
+    ],
+    opciones: [
+      { text: "Volver a Empleo Joven", next: "empleojoven"},
       { text: VOLVER, next: "inicio" }
     ]
   },
