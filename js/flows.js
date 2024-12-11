@@ -78,9 +78,9 @@ export const flows = {
       { text: "¿Cómo hago para registrarme y cargar mi CV?", next: "empleojoven_postulantes_01" },
       { text: "Ya tenía cuenta en el Portal, pero cambió el ingreso y no puedo acceder con mi usuario y contraseña.", next: "empleojoven_postulantes_02" },
       { text: "¿Cómo me postulo a un aviso?", next: "empleojoven_postulantes_03" },
-      { text: "¿Se pueden modificar los datos de mi CV?", next: "empleojoven_postulantes_04" },
-      { text: "¿Se pueden agregar más datos a mi CV?", next: "empleojoven_postulantes_05" },
-      { text: "¿El usuario tiene fecha de caducidad?", next: "empleojoven_postulantes_06" },
+      // { text: "¿Se pueden modificar los datos de mi CV?", next: "empleojoven_postulantes_04" },
+      // { text: "¿Se pueden agregar más datos a mi CV?", next: "empleojoven_postulantes_05" },
+      // { text: "¿El usuario tiene fecha de caducidad?", next: "empleojoven_postulantes_06" },
       { text: "Los datos publicados, ¿son de acceso público?", next: "empleojoven_postulantes_07" },
       { text: "¿Cómo busco un aviso?", next: "empleojoven_postulantes_08" },
       { text: "¿Tengo que estar registrado para ver los detalles de un aviso?", next: "empleojoven_postulantes_09" },
@@ -128,33 +128,33 @@ export const flows = {
       { text: VOLVER, next: "inicio" }
     ]
   },
-  empleojoven_postulantes_04: {
-    mensaje: [
-      "Se puede revisar, corregir y actualizar tus datos en todo momento en la página web de Portal de Empleo. Te aconsejamos mantener actualizado el CV para que aumenten las posibilidades de ser convocado a una entrevista de trabajo, ya que además la fecha de tu CV se actualiza automáticamente."
-    ],
-    opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
-  empleojoven_postulantes_05: {
-    mensaje: [
-      "Sólo se puede incluir en el CV la información que Portal de Empleo te solicita."
-    ],
-    opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
-  empleojoven_postulantes_06: {
-    mensaje: [
-      "Luego de 6 meses, si el sistema no registra ninguna actividad, es decir que no se modificó el CV, ni se realizó ninguna postulación o incluso no se ingresó al sistema, se dará de baja tu CV, previo aviso a tu correo electrónico. Puedes volver a inscribirte en Portal de Empleo todas las veces que lo desees."
-    ],
-    opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
+  // empleojoven_postulantes_04: {
+  //   mensaje: [
+  //     "Se puede revisar, corregir y actualizar tus datos en todo momento en la página web de Portal de Empleo. Te aconsejamos mantener actualizado el CV para que aumenten las posibilidades de ser convocado a una entrevista de trabajo, ya que además la fecha de tu CV se actualiza automáticamente."
+  //   ],
+  //   opciones: [
+  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+  //     { text: VOLVER, next: "inicio" }
+  //   ]
+  // },
+  // empleojoven_postulantes_05: {
+  //   mensaje: [
+  //     "Sólo se puede incluir en el CV la información que Portal de Empleo te solicita."
+  //   ],
+  //   opciones: [
+  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+  //     { text: VOLVER, next: "inicio" }
+  //   ]
+  // },
+  // empleojoven_postulantes_06: {
+  //   mensaje: [
+  //     "Luego de 6 meses, si el sistema no registra ninguna actividad, es decir que no se modificó el CV, ni se realizó ninguna postulación o incluso no se ingresó al sistema, se dará de baja tu CV, previo aviso a tu correo electrónico. Puedes volver a inscribirte en Portal de Empleo todas las veces que lo desees."
+  //   ],
+  //   opciones: [
+  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+  //     { text: VOLVER, next: "inicio" }
+  //   ]
+  // },
   empleojoven_postulantes_07: {
     mensaje: [
       "Portal de Empleo asegura a los usuarios que se respetará en todo momento la confidencialidad de sus datos conforme a lo fijado por la Ley 25326 de Protección de Datos Personales y su reglamentación. Por tanto, los datos de los usuarios no serán conocidos por terceros ni exhibidos públicamente en ningún medio."
