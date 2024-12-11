@@ -1,9 +1,7 @@
-let flows;
+import { flows } from "./flows.js";
+import { keywords } from "./keywords.js";
 
-document.addEventListener("DOMContentLoaded", async () => {
-    flows = await fetch("./js/flows.json").then(response => response.json());
-    startChat("inicioBienvenida");
-});
+startChat("inicioBienvenida");
 
 function startChat(flowName) {
     const flow = flows[flowName];
@@ -83,6 +81,10 @@ document.getElementById("user-input").addEventListener("keydown", (event) => {
     }
 });
 
+
+
+
+
 function sendMessage() {
     const input = document.getElementById("user-input");
     const userMessage = input.value.trim().toLowerCase(); // Convertir a minúsculas para comparación
@@ -99,16 +101,19 @@ function sendMessage() {
     // Eliminar las opciones actuales
     clearOptions();
 
-    // Verificar si el mensaje contiene "hola"
-    if (userMessage.includes("hola")) {
-        // Mostrar saludo personalizado
-        displayMessage("bot", "¡Hola! Es un gusto ayudarte. Si bien no puedo responder consultas personalizadas, cuento con mucha información útil que puedes explorar seleccionando las opciones disponibles.");
-        startChat("inicio");
-        return; // Terminar ejecución después de mostrar saludo y opciones
+    // Verificar si el mensaje del usuario coincide con alguna palabra clave
+    for (const { keyword, response, flow } of keywords) {
+        if (userMessage.includes(keyword)) {
+            if (response != "") {
+                displayMessage("bot", response);
+            }
+            startChat(flow);
+            return; // Terminar ejecución después de manejar la palabra clave
+        }
     }
 
     // Buscar flujo de respuesta o usar el predeterminado
-    const flow = flows["defaultResponse"]; // Cambiar según lógica específica si es necesario
+    const flow = flows["defaultResponse"];
 
     if (flow) {
         if (Array.isArray(flow.mensaje)) {
@@ -125,3 +130,4 @@ function sendMessage() {
         startChat("inicio");
     }
 }
+
