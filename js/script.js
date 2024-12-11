@@ -74,15 +74,14 @@ function clearOptions() {
 
 // SEND MESSAGE
 
+document.querySelector("#send").onclick = sendMessage;
+
 // Agregar evento para enviar mensaje con Enter
-document.getElementById("user-input").addEventListener("keydown", (event) => {
+document.querySelector("#user-input").addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
         sendMessage();
     }
 });
-
-
-
 
 
 function sendMessage() {
