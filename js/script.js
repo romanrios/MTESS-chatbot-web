@@ -1,7 +1,7 @@
 let flows;
 
 document.addEventListener("DOMContentLoaded", async () => {
-    flows = await fetch("flows.json").then(response => response.json());
+    flows = await fetch("./js/flows.json").then(response => response.json());
     startChat("inicioBienvenida");
 });
 

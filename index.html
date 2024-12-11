@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asistente Virtual MTEySS</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="./favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./assets/favicon.png" type="image/png">
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
     <div class="chat-container">
         <div class="banner">
-            <img class="banner_img" src="./profile.jpg" alt="Logo de Santa Fe Provincia">
+            <img class="banner_img" src="./assets/profile.jpg" alt="Logo de Santa Fe Provincia">
             <div>
             <p>Asistente Virtual</p>
             <p>Secretaría de Empleo y Desarrollo Emprendedor</p>
@@ -21,9 +22,8 @@
         </div>
         <div class="input-container">
             <input type="text" id="user-input" placeholder="Mensaje" />
-            <button onclick="sendMessage()"><img src="./send-icon.svg" alt="Botón Enviar"></button>
+            <button onclick="sendMessage()"><img src="./assets/send-icon.svg" alt="Botón Enviar"></button>
         </div>
     </div>    
-    <script src="script.js"></script>
 </body>
 </html>
