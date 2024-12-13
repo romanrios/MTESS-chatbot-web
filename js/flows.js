@@ -36,7 +36,7 @@ export const flows = {
       "Así, se pretende equipar a los ciudadanos con herramientas que potencien su inserción en el mercado laboral y contribuyan al incremento de la productividad dentro de la Provincia de Santa Fe.",
       "Entre el Ministerio de Educación, el Ministerio de Desarrollo Productivo y el Ministerio de Trabajo, Empleo y Seguridad Social se concentra una gran cantidad de oferta formativa a lo largo y a lo ancho de la provincia, con certificación oficial, espacios de aprendizaje continuos, capacidad instalada para realizarlo y programas que acompañan el funcionamiento de los mismos y que éste gabinete busca articular eficientemente.",
       "Si querés conocer toda la oferta formativa vigente ingresá en este <a href='https://www.santafe.gob.ar/ms/impulsa/oferta-formativa-completa/' target='_blank'>👉&nbsp;Enlace</a>",
-      "Si querés postular una capacitación ingresá en este <a href='https://twww.santafe.gob.ar/simtyss/portalempleo/?menu_subportales/ver_info_programa/1/' target='_blank'>👉&nbsp;Enlace</a>"
+      "Si querés postular una capacitación ingresá en este <a href='https://twww.santafe.gob.ar/simtyss/portalempleo/?menu_subportales/ver_info_programa/1/' target='_blank'>👉&nbsp;Enlace</a> (Sección <b>Santa Fe Capacita</b>)"
     ],
     opciones: [
       { text: VOLVER, next: "inicio" }
@@ -442,7 +442,7 @@ export const flows = {
   },
   otra: {
     mensaje: [
-      "Para realizar otra consulta ingresá al siguiente <a href='https://wa.me/5493425330074' target='_blank'>👉&nbsp;Enlace</a>"
+      "Para realizar otra consulta ingresá al siguiente <a href='https://wa.me/5493425310158' target='_blank'>👉&nbsp;Enlace</a>"
     ],
     opciones: [
       { text: VOLVER, next: "inicio" }
