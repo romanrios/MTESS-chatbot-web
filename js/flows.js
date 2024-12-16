@@ -270,7 +270,7 @@ export const flows = {
     mensaje: [
       "Las empresas ingresan al portal autenticándose con Clave Fiscal de AFIP.",
       '<b>Si aún no adheriste al servicio "Portal Empleo" en AFIP:</b>',
-      "Podrás encontrar el servicio en:<br>• Administrador de relaciones<br>• Adherir Servicio<br>• Botón API - Administración Provincial de Impuestos - Provincia de Santa Fe<br>• Opción Servicios Interactivos<br>• Sevicio: Trabajo– SANTA FE – Capacitación y Formación Profesional",
+      "Podrás encontrar el servicio en:<br>• Administrador de relaciones<br>• Adherir Servicio<br>• Botón API - Administración Provincial de Impuestos - Provincia de Santa Fe<br>• Opción Servicios Interactivos<br>• Servicio: Trabajo - SANTA FE - Capacitación y Formación Profesional",
       "<b>Si ya adheriste al servicio en AFIP:</b>",
       "• Simplemente hacé click en Iniciar Sesión > Soy Empresa. Te redirigiremos al portal de AFIP para autenticarte con clave fiscal.",
       "• Una vez autenticado en AFIP, si tenés varios CUITs delegados, elegís con cual operar.",
