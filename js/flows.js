@@ -140,7 +140,7 @@ export const flows = {
   },
   empleojoven_postulantes_03: {
     mensaje: [
-      '<b>1.</b> Para conocer la oferta de puestos vigentes, ingresá a la sección <b>Busco Trabajo</b>". (debes estar registrado y haber ingresado con tu usuario y contraseña).',
+      '<b>1.</b> Para conocer la oferta de puestos vigentes, ingresá a la sección <b>Busco Trabajo</b>. (debes estar registrado y haber ingresado con tu usuario y contraseña).',
       "<b>2.</b> Podés buscar avisos filtrando la información por localidad o puesto o ver la información completa sin agregar ningún filtro. Presionando el botón <b>Buscar</b>, se mostrarán abajo los resultados de la búsqueda.",
       "<b>3.</b> Haciendo clic en <b>Ver detalle</b>, verás los requisitos del puesto y los datos de contacto de la empresa. Si el puesto se adapta a tu perfil laboral y es de tu interés, podés enviar tu CV a través de Portal de Empleo. Para ello hacé click en el botón <b>Postularme</b> (sobre el final de la página). No envíes tu CV a los avisos en los que no cumples los requisitos mínimos, ya que no serás tomado en cuenta para el puesto y puedes perder oportunidades futuras en esa empresa."
     ],
