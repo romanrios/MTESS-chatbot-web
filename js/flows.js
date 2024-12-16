@@ -197,7 +197,7 @@ export const flows = {
   },
   empleojoven_postulantes_09: {
     mensaje: [
-      "Si, es necesario estar registrado para ver la información completa del aviso, los datos del empleador y utilizar el servicio. Las personas que no estén registradas pueden ver los puestos vacantes pero no pueden acceder a los requisitos ni tampoco a los datos de contacto."
+      "Sí, es necesario estar registrado para ver la información completa del aviso, los datos del empleador y utilizar el servicio. Las personas que no estén registradas pueden ver los puestos vacantes pero no pueden acceder a los requisitos ni tampoco a los datos de contacto."
     ],
     opciones: [
       { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
@@ -362,7 +362,7 @@ export const flows = {
   },
   empleojoven_empresas_10: {
     mensaje: [
-      "Si, puede participar de Empleo Joven cualquier CUIT registrado ante AFIP como empleador."
+      "Sí, puede participar de Empleo Joven cualquier CUIT registrado ante AFIP como empleador."
     ],
     opciones: [
       { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
@@ -371,7 +371,7 @@ export const flows = {
   },
   empleojoven_empresas_11: {
     mensaje: [
-      "Si. La cantidad de empleados no es un impedimento."
+      "Sí. La cantidad de empleados no es un impedimento."
     ],
     opciones: [
       { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
@@ -398,7 +398,7 @@ export const flows = {
   // },
   empleojoven_empresas_14: {
     mensaje: [
-      "Si. Debe tener entre 18 y 30 al momento de la adhesión."
+      "Sí. Debe tener entre 18 y 30 al momento de la adhesión."
     ],
     opciones: [
       { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
@@ -407,7 +407,7 @@ export const flows = {
   },
   empleojoven_empresas_15: {
     mensaje: [
-      "Si. En ese caso, se reintegrará sólo lo abonado en el lapso en que se mantuvo la relación laboral."
+      "Sí. En ese caso, se reintegrará sólo lo abonado en el lapso en que se mantuvo la relación laboral."
     ],
     opciones: [
       { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
