@@ -71,10 +71,11 @@ export const flows = {
     ],
     opciones: [
       { text: "¿Qué es Empleo Joven?", next: "empleojoven_quees" },
-      { text: "Requisitos Trabajadores", next: "empleojoven_requisitos_trabajadores" },
-      { text: "Requisitos Empresarios", next: "empleojoven_requisitos_empresarios" },
-      { text: "Preguntas Frecuentes Postulantes", next: "empleojoven_postulantes" },
-      { text: "Preguntas Frecuentes Empresas", next: "empleojoven_empresas" },
+      { text: "¿Cuáles son los requisitos?", next: "empleojoven_requisitos" },
+      { text: "¿Cómo hago para registrarme y cargar mi CV?", next: "empleojoven_registro" },
+      { text: "Avisos laborales", next: "empleojoven_avisos" },
+      { text: "Preguntas Frecuentes", next: "empleojoven_faqpostulantes" },
+      { text: "Tengo una empresa", next: "empleojoven_tengoempresa" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -92,7 +93,7 @@ export const flows = {
     ]
   },
 
-  empleojoven_requisitos_trabajadores: {
+  empleojoven_requisitos: {
     mensaje: [
       "• Personas entre 18 y 30 años, inclusive.<br>• Residan en forma permanente en la Provincia de Santa Fe.<br>• Hayan completado el nivel secundario formal obligatorio, o se encuentren terminando sus estudios, o suscriban, en su caso, compromiso de continuación de sus estudios.<br>• La persona se debe encontrar en situación de desempleo.<br>• Trabajadores con discapacidad: Deben contar con el certificado que se expide en el marco de la Ley Nº 22.431."
     ],
@@ -102,35 +103,7 @@ export const flows = {
     ]
   },
 
-  empleojoven_requisitos_empresarios: {
-    mensaje: [
-      "• Empleadores del sector privado de cualquier actividad económica.<br>• No tengan sanciones en los últimos dos años por violación a la normativa laboral. Salvo, que teniéndolas las hayan cancelado o bien tengan un convenio de pago vigente. <br>• No hayan realizado despidos colectivos dentro de los seis meses previos a la solicitud de adhesión. <br> • No hayan tenido con el beneficiario relación laboral previa en los últimos tres (3) meses.<br>• No se encuentren cobrando beneficios de otros organismos relacionados al trabajador beneficiario por el presente programa.<br>• El empleador deberá estar inscripto y con sus datos actualizados en el registro de SIPAF que posee el MTEySS. A tal efecto, se deberá cumplimentar el <a href='https://www.santafe.gob.ar/simtyss/portalempleo/pdfs/Formulario_Inscripci%C3%B3n_Actualizaci%C3%B3n_SIPAF_2024.pdf?v=20240228' target='_blank'>formulario</a> de SIPAF junto con la documentación que se detalla en el presente <a href='https://www.santafe.gob.ar/simtyss/portalempleo/pdfs/Instructivo_SIPAF_2024.pdf' target='_blank'>instructivo</a>.<br>• <a href='https://www.santafe.gob.ar/simtyss/portalempleo/pdfs/Terminos_condiciones_EmpleoJoven.pdf?v=20240227' target='_blank'>Leer términos y condiciones completo</a>"
-    ],
-    opciones: [
-      { text: "Volver a Empleo Joven", next: "empleojoven" },
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
-
-
-
-
-  // Empleo Joven - FAQ Postulantes
-  empleojoven_postulantes: {
-    mensaje: [
-      "Preguntas Frecuentes Postulantes:"
-    ],
-    opciones: [
-      { text: "¿Cómo hago para registrarme y cargar mi CV?", next: "empleojoven_postulantes_01" },
-      { text: "Ya tenía cuenta en el Portal, pero cambió el ingreso y no puedo acceder con mi usuario y contraseña.", next: "empleojoven_postulantes_02" },
-      { text: "¿Cómo me postulo a un aviso?", next: "empleojoven_postulantes_03" },
-      { text: "¿Cómo busco un aviso?", next: "empleojoven_postulantes_08" },
-      { text: "¿Tengo que estar registrado para ver los detalles de un aviso?", next: "empleojoven_postulantes_09" },
-      { text: "¿Puedo participar de Empleo Joven más de una vez?", next: "empleojoven_postulantes_13" },
-      { text: "Volver a Empleo Joven", next: "empleojoven" }
-    ]
-  },
-  empleojoven_postulantes_01: {
+  empleojoven_registro: {
     mensaje: [
       "El ingreso al portal es a través de ID Ciudadana.",
       "<b>¿Qué es la ID Ciudadana?</b> Es el sistema de Identificación Digital del Gobierno de la Provincia de Santa Fe que permite a los ciudadanos registrarse como Usuarios para el uso de sus sistemas informáticos y el acceso a servicios digitales. Al concluir el proceso de registro, obtendrás un usuario y contraseña única para acceder a diversos Sistemas de la Provincia (ejemplo: Libreta digital, Aula Virtual, Portal de Autogestión, Boleto educativo gratuito, Turnos, Firma Digital, etc.).",
@@ -139,10 +112,35 @@ export const flows = {
       "Una vez que te hayas autenticado, tendrás que completar un sencillo formulario con tu curriculum vitae (CV). Una vez hayas cargado tu CV, tu registro estará finalizado y podrás postularte a avisos de puestos de trabajo vacantes."
     ],
     opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+      { text: "Volver a Empleo Joven", next: "empleojoven" },
       { text: VOLVER, next: "inicio" }
     ]
   },
+
+  empleojoven_avisos: {
+    mensaje: ["Para ver las ofertas laborales ingresá en este <a href='https://www.santafe.gob.ar/simtyss/portalempleo/?home/' target='_blank'>👉 Enlace</a>  y seleccioná la opción Postulantes. Para poder postularte tenés que estar registrado."],
+    opciones: [
+      { text: "Volver a Empleo Joven", next: "empleojoven" },
+      { text: VOLVER, next: "inicio" }
+    ]
+  },
+
+
+  // Empleo Joven - FAQ Postulantes
+  empleojoven_faqpostulantes: {
+    mensaje: [
+      "Preguntas Frecuentes Postulantes:"
+    ],
+    opciones: [
+      { text: "Ya tenía cuenta en el Portal, pero cambió el ingreso y no puedo acceder con mi usuario y contraseña.", next: "empleojoven_postulantes_02" },
+      { text: "¿Cómo me postulo a un aviso?", next: "empleojoven_postulantes_03" },
+      { text: "¿Cómo busco un aviso?", next: "empleojoven_postulantes_08" },
+      { text: "¿Tengo que estar registrado para ver los detalles de un aviso?", next: "empleojoven_postulantes_09" },
+      { text: "¿Puedo participar de Empleo Joven más de una vez?", next: "empleojoven_postulantes_13" },
+      { text: "Volver a Empleo Joven", next: "empleojoven" }
+    ]
+  },
+
   empleojoven_postulantes_02: {
     mensaje: [
       "Tu cuenta sigue activa, sólo cambiamos la modalidad de ingreso al portal.",
@@ -151,7 +149,7 @@ export const flows = {
       "Una vez que te hayas autenticado asociaremos automáticamente tu cuenta a través de tu número de CUIL y podrás operar con normalidad en el portal."
     ],
     opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+      { text: VOLVER_POSTULANTES, next: "empleojoven_faqpostulantes" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -162,7 +160,7 @@ export const flows = {
       "<b>3.</b> Haciendo clic en <b>Ver detalle</b>, verás los requisitos del puesto y los datos de contacto de la empresa. Si el puesto se adapta a tu perfil laboral y es de tu interés, podés enviar tu CV a través de Portal de Empleo. Para ello hacé click en el botón <b>Postularme</b> (sobre el final de la página). No envíes tu CV a los avisos en los que no cumples los requisitos mínimos, ya que no serás tomado en cuenta para el puesto y puedes perder oportunidades futuras en esa empresa."
     ],
     opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+      { text: VOLVER_POSTULANTES, next: "empleojoven_faqpostulantes" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -173,7 +171,7 @@ export const flows = {
       "En cada aviso se encuentra información básica del puesto publicado. Para conocer más especificaciones del puesto, se debe hacer clic en <b>Ver puesto</b>. El sistema abre entonces una ventana en la pantalla con todos los detalles del puesto de trabajo avisado por la empresa. El aviso puede ser descargado o impreso."
     ],
     opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+      { text: VOLVER_POSTULANTES, next: "empleojoven_faqpostulantes" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -182,7 +180,7 @@ export const flows = {
       "Sí, es necesario estar registrado para ver la información completa del aviso, los datos del empleador y utilizar el servicio. Las personas que no estén registradas pueden ver los puestos vacantes pero no pueden acceder a los requisitos ni tampoco a los datos de contacto."
     ],
     opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+      { text: VOLVER_POSTULANTES, next: "empleojoven_faqpostulantes" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -191,18 +189,57 @@ export const flows = {
       "No. El periodo máximo en el que podés permanecer dentro del programa es de 6 meses, o 12 si tenes discapacidad."
     ],
     opciones: [
-      { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
+      { text: VOLVER_POSTULANTES, next: "empleojoven_faqpostulantes" },
       { text: VOLVER, next: "inicio" }
     ]
   },
 
+  // Empleo Joven - Tengo Empresa
+  empleojoven_tengoempresa: {
+    mensaje: ["Sección de ayuda de Empleo Joven para Empresas: "],
+    opciones: [
+      { text: "Requisitos Empresas", next: "empleojoven_tengoempresa_requisitos" },
+      { text: "¿Cómo hago para registrarme?", next: "empleojoven_tengoempresa_registro" },
+      { text: "Preguntas Frecuentes Empresas", next: "empleojoven_tengoempresa_faq" },
+      { text: "Volver a Empleo Joven", next: "empleojoven" }
+    ]
+  },
+
+  empleojoven_tengoempresa_requisitos: {
+    mensaje: [
+      "• Empleadores del sector privado de cualquier actividad económica.<br>• No tengan sanciones en los últimos dos años por violación a la normativa laboral. Salvo, que teniéndolas las hayan cancelado o bien tengan un convenio de pago vigente. <br>• No hayan realizado despidos colectivos dentro de los seis meses previos a la solicitud de adhesión. <br> • No hayan tenido con el beneficiario relación laboral previa en los últimos tres (3) meses.<br>• No se encuentren cobrando beneficios de otros organismos relacionados al trabajador beneficiario por el presente programa.<br>• El empleador deberá estar inscripto y con sus datos actualizados en el registro de SIPAF que posee el MTEySS. A tal efecto, se deberá cumplimentar el <a href='https://www.santafe.gob.ar/simtyss/portalempleo/pdfs/Formulario_Inscripci%C3%B3n_Actualizaci%C3%B3n_SIPAF_2024.pdf?v=20240228' target='_blank'>formulario</a> de SIPAF junto con la documentación que se detalla en el presente <a href='https://www.santafe.gob.ar/simtyss/portalempleo/pdfs/Instructivo_SIPAF_2024.pdf' target='_blank'>instructivo</a>.<br>• <a href='https://www.santafe.gob.ar/simtyss/portalempleo/pdfs/Terminos_condiciones_EmpleoJoven.pdf?v=20240227' target='_blank'>Leer términos y condiciones completo</a>"
+    ],
+    opciones: [
+      { text: "Volver a Empleo Joven - Empresas", next: "empleojoven_tengoempresa" },
+      { text: VOLVER, next: "inicio" }
+    ]
+  },
+
+  empleojoven_tengoempresa_registro: {
+    mensaje: [
+      "Las empresas ingresan al portal autenticándose con Clave Fiscal de AFIP.",
+      '<b>Si aún no adheriste al servicio "Portal Empleo" en AFIP:</b>',
+      "Podrás encontrar el servicio en:<br>• Administrador de relaciones<br>• Adherir Servicio<br>• Botón API - Administración Provincial de Impuestos - Provincia de Santa Fe<br>• Opción Servicios Interactivos<br>• Servicio: Trabajo - SANTA FE - Capacitación y Formación Profesional",
+      "<b>Si ya adheriste al servicio en AFIP:</b>",
+      "• Simplemente hacé click en Iniciar Sesión > Soy Empresa. Te redirigiremos al portal de AFIP para autenticarte con clave fiscal.",
+      "• Una vez autenticado en AFIP, si tenés varios CUITs delegados, elegís con cual operar.",
+      "Si es el primer ingreso al portal, te pediremos que confirmes que la información de tu empresa es correcta, e ingreses un email de contacto. Una vez completado este último paso, podrás comenzar a buscar postulantes y ofrecer puestos vacantes."
+    ],
+    opciones: [
+      { text: "Volver a Empleo Joven - Empresas", next: "empleojoven_tengoempresa" },
+      { text: VOLVER, next: "inicio" }
+    ]
+  },
+
+
+
+
   // Empleo Joven - FAQ Empresas
-  empleojoven_empresas: {
+  empleojoven_tengoempresa_faq: {
     mensaje: [
       "Preguntas Frecuentes Empresas:"
     ],
     opciones: [
-      { text: "¿Cómo hago para registrarme?", next: "empleojoven_empresas_01" },
       { text: "¿Qué pasa si el CUIT de mi empresa no aparece registrado?", next: "empleojoven_empresas_02" },
       { text: "Ya tenía cuenta en el portal ¿Cómo accedo con mi usuario y contraseña anterior?", next: "empleojoven_empresas_03" },
       { text: "¿Cómo hago para publicar un aviso?", next: "empleojoven_empresas_04" },
@@ -219,27 +256,13 @@ export const flows = {
       { text: "Volver a Empleo Joven", next: "empleojoven" },
     ]
   },
-  empleojoven_empresas_01: {
-    mensaje: [
-      "Las empresas ingresan al portal autenticándose con Clave Fiscal de AFIP.",
-      '<b>Si aún no adheriste al servicio "Portal Empleo" en AFIP:</b>',
-      "Podrás encontrar el servicio en:<br>• Administrador de relaciones<br>• Adherir Servicio<br>• Botón API - Administración Provincial de Impuestos - Provincia de Santa Fe<br>• Opción Servicios Interactivos<br>• Servicio: Trabajo - SANTA FE - Capacitación y Formación Profesional",
-      "<b>Si ya adheriste al servicio en AFIP:</b>",
-      "• Simplemente hacé click en Iniciar Sesión > Soy Empresa. Te redirigiremos al portal de AFIP para autenticarte con clave fiscal.",
-      "• Una vez autenticado en AFIP, si tenés varios CUITs delegados, elegís con cual operar.",
-      "Si es el primer ingreso al portal, te pediremos que confirmes que la información de tu empresa es correcta, e ingreses un email de contacto. Una vez completado este último paso, podrás comenzar a buscar postulantes y ofrecer puestos vacantes."
-    ],
-    opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
+
   empleojoven_empresas_02: {
     mensaje: [
       "En ese caso hay que completar el formulario de contacto de la página web, aportando la mayor cantidad de datos de la empresa (C.U.I.T., razón social, dirección, teléfono, etc). El Equipo Técnico de Portal de Empleo se estará comunicando para arribar a una solución a la brevedad."
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -251,7 +274,7 @@ export const flows = {
       "En caso de dificultades para acceder, escribinos a <a href='mailto:mejortrabajo@santafe.gob.ar'>mejortrabajo@santafe.gob.ar</a> o <a href='https://www.santafe.gob.ar/simtyss/portalempleo/?home/#anchor-contacto' target='_blank'>Completá el formulario de contacto.</a>"
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -261,7 +284,7 @@ export const flows = {
       "Allí encontrará la opción <b>Ofrecer Puesto</b>, la cual muestra el formulario de puesto vacante. La oferta de un puesto le permite tener acceso a la base de datos de postulantes."
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -270,7 +293,7 @@ export const flows = {
       "No hay límite. Se pueden publicar todos los avisos que su empresa necesite de forma gratuita."
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -281,7 +304,7 @@ export const flows = {
       "Recuerde que la empresa debe publicar al menos 1 aviso para ver la información completa de los postulantes."
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -291,7 +314,7 @@ export const flows = {
       "Cuando finalizaron de escoger a todos los candidatos, se imprime la DDJJ. Caso contrario, si se imprime prematuramente, el portal interpreta que la selección finalizó y cierra el aviso."
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -300,7 +323,7 @@ export const flows = {
       "Los postulantes pueden contactarse por medio del sitio en respuesta a los avisos publicados. Cuando un postulante hace click en la opción <b>Postularme</b>, que aparece en el aviso publicado, el sistema envía automáticamente un email a la empresa indicando su postulación y adjuntando el CV."
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -309,7 +332,7 @@ export const flows = {
       '<b>NACIONALES</b><br><b>Ley N°22.431</b> (modificada por la Ley N°23.021, art. 23): "El 70% del total de las remuneraciones abonadas en ejercicio fiscal podrá ser deducido de la base del impuesto a las ganancias de dicho período".<br><b>Ley N°24.013</b><br>Art. 87: "El empleador será eximido, en el primer año de contratación, del pago del 50% de las contribuciones patronales y a las cajas de jubilaciones correspondientes, de las asignaciones y subsidios familiares, al INSSPyJ y al Fondo Nacional de Empleo".<br>Art. N° 88: Establece que los empleadores que contraten un cuatro por ciento (4%) o más de su personal con trabajadores con discapacidad y deban emprender obras en sus establecimientos para suprimir las llamadas barreras arquitectónicas, gozarán de créditos especiales para la financiación de las mismas.<br>Art. N° 89: Las obras sociales están obligadas a incorporar trabajadores con discapacidad, ya que tienen derecho a la Prestación Médica Obligatoria (POM) Los contratos de seguro de accidentes de trabajo no podrán discriminar ni en la prima ni en las condiciones, en razón de la calificación del trabajador asegurado con discapacidad.<br><b>Ley N°26.476</b>, título II, capítulo II, Regularización Impositiva: "Los empleadores por el término de 24 (VEINTICUATRO) meses contados a partir del mes de inicio gozarán de una reducción de sus contribuciones con destino a la seguridad social. Los primeros 12 (DOCE) meses se ingresará el 50% y los segundos 12 (DOCE) meses el 75%".<br><b>PROVINCIALES</b><br><b>Ley Nº 13853</b><br>Art. Nº 38: Establece un estímulo fiscal a los empleadores que concedan empleo a personas con discapacidad, los que tendrán una deducción especial en la base imponible del impuesto a los ingresos brutos equivalentes al 100% de las retribuciones correspondientes al personal con discapacidad en cada período fiscal.'
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -318,7 +341,7 @@ export const flows = {
       "Sí, puede participar de Empleo Joven cualquier CUIT registrado ante AFIP como empleador."
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -327,7 +350,7 @@ export const flows = {
       "Sí. La cantidad de empleados no es un impedimento."
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -336,7 +359,7 @@ export const flows = {
       "No, no hay límite de adhesiones."
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -346,7 +369,7 @@ export const flows = {
       "Sí. Debe tener entre 18 y 30 al momento de la adhesión."
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -355,7 +378,7 @@ export const flows = {
       "Sí. En ese caso, se reintegrará sólo lo abonado en el lapso en que se mantuvo la relación laboral."
     ],
     opciones: [
-      { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
+      { text: VOLVER_EMPRESAS, next: "empleojoven_tengoempresa_faq" },
       { text: VOLVER, next: "inicio" }
     ]
   },
