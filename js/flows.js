@@ -29,19 +29,41 @@ export const flows = {
   },
   // Impulsa
   impulsa: {
-    mensaje: [
-      "<b>Impulsa</b>, Aprender, Producir, Trabajar, es una iniciativa liderada por el gabinete productivo de la Provincia de Santa Fe.",
-      "Este plan se centra en la sinergia entre el Ministerio de Educación, el Ministerio de Desarrollo Productivo y el Ministerio de Trabajo, Empleo y Seguridad Social, con el objetivo de coordinar estratégicamente la capacitación laboral y la formación profesional de las personas.",
-      "Su desafío es mejorar sustancialmente las condiciones de empleabilidad, alineándose con las necesidades del sector privado, optimizando las matrices productivas y atendiendo a las áreas estratégicas que definen el territorio provincial.",
-      "Así, se pretende equipar a los ciudadanos con herramientas que potencien su inserción en el mercado laboral y contribuyan al incremento de la productividad dentro de la Provincia de Santa Fe.",
-      "Entre el Ministerio de Educación, el Ministerio de Desarrollo Productivo y el Ministerio de Trabajo, Empleo y Seguridad Social se concentra una gran cantidad de oferta formativa a lo largo y a lo ancho de la provincia, con certificación oficial, espacios de aprendizaje continuos, capacidad instalada para realizarlo y programas que acompañan el funcionamiento de los mismos y que éste gabinete busca articular eficientemente.",
-      "Si querés conocer toda la oferta formativa vigente ingresá en este <a href='https://www.santafe.gob.ar/ms/impulsa/oferta-formativa-completa/' target='_blank'>👉&nbsp;Enlace</a>",
-      "Si querés postular una capacitación ingresá en este <a href='https://twww.santafe.gob.ar/simtyss/portalempleo/?menu_subportales/ver_info_programa/1/' target='_blank'>👉&nbsp;Enlace</a> (Sección <b>Santa Fe Capacita</b>)"
-    ],
+    mensaje: ["Sección de Ayuda de Impulsa:"],
     opciones: [
+      { text: "¿Qué es Impulsa?", next: "impulsa_quees" },
+      { text: "Oferta formativa", next: "impulsa_oferta" },
+      { text: "Postular una capacitación", next: "impulsa_postular" },
       { text: VOLVER, next: "inicio" }
     ]
   },
+  impulsa_quees: {
+    mensaje: [
+      "<b>Impulsa</b> es un programa del gabinete productivo de la Provincia de Santa Fe que busca fortalecer el sector productivo local a través de capacitaciones específicas. Su objetivo es preparar a los santafesinos con habilidades que respondan a las necesidades del mercado laboral y potencien las economías regionales.",
+      "La iniciativa mejora la empleabilidad al alinear la formación con las demandas del sector privado, optimizando las matrices productivas y enfocándose en áreas estratégicas clave del territorio provincial.",
+      "En colaboración con los Ministerios de Educación, Desarrollo Productivo y Trabajo, Empleo y Seguridad Social, se ofrece una amplia variedad de capacitaciones con certificación oficial en toda la provincia, apoyadas por recursos y espacios de aprendizaje continuo.",
+      "Conocé todo sobre este programa en este <a href='https://www.santafe.gob.ar/ms/impulsa/' target='_blank'>👉 Enlace</a>"
+    ],
+    opciones: [
+      { text: "Volver a Impulsa", next: "impulsa" },
+      { text: VOLVER, next: "inicio" }
+    ]
+  },
+  impulsa_oferta: {
+    mensaje: ["Si querés conocer toda la oferta formativa vigente ingresá en este <a href='https://www.santafe.gob.ar/ms/impulsa/oferta-formativa-completa/' target='_blank'>👉&nbsp;Enlace</a>"],
+    opciones: [
+      { text: "Volver a Impulsa", next: "impulsa" },
+      { text: VOLVER, next: "inicio" }
+    ]
+  },
+  impulsa_postular: {
+    mensaje: ["Si querés postular una capacitación ingresá en este <a href='https://twww.santafe.gob.ar/simtyss/portalempleo/?menu_subportales/ver_info_programa/1/' target='_blank'>👉&nbsp;Enlace</a> (Sección <b>Santa Fe Capacita</b>)"],
+    opciones: [
+      { text: "Volver a Impulsa", next: "impulsa" },
+      { text: VOLVER, next: "inicio" }
+    ]
+  },
+
   // Empleo Joven
   empleojoven: {
     mensaje: [
@@ -57,12 +79,25 @@ export const flows = {
     ]
   },
 
+  empleojoven_quees: {
+    mensaje: [
+      "<b>Empleo Joven®</b> es un programa provincial de intermediación laboral entre personas y empresas que busca favorecer la inserción y estabilidad laboral de las personas, brindando un estímulo económico a la contratación laboral registrada.",
+      "De esta forma, también acompañamos a quienes producen y generan empleo en todo el territorio provincial.",
+      "El estímulo económico es el equivalente al 85% del Salario Mínimo Vital y Móvil y el beneficio se extiende de 4 a 6 meses.",
+      "Si estás buscando empleo, o si estás buscando personal, registrate en el portal accediendo a este <a href='https://www.santafe.gob.ar/simtyss/portalempleo/?home/' target='_blank'>👉&nbsp;Enlace</a>"
+    ],
+    opciones: [
+      { text: "Volver a Empleo Joven", next: "empleojoven" },
+      { text: VOLVER, next: "inicio" }
+    ]
+  },
+
   empleojoven_requisitos_trabajadores: {
     mensaje: [
       "• Personas entre 18 y 30 años, inclusive.<br>• Residan en forma permanente en la Provincia de Santa Fe.<br>• Hayan completado el nivel secundario formal obligatorio, o se encuentren terminando sus estudios, o suscriban, en su caso, compromiso de continuación de sus estudios.<br>• La persona se debe encontrar en situación de desempleo.<br>• Trabajadores con discapacidad: Deben contar con el certificado que se expide en el marco de la Ley Nº 22.431."
     ],
     opciones: [
-      { text: "Volver a Empleo Joven", next: "empleojoven"},
+      { text: "Volver a Empleo Joven", next: "empleojoven" },
       { text: VOLVER, next: "inicio" }
     ]
   },
@@ -72,23 +107,12 @@ export const flows = {
       "• Empleadores del sector privado de cualquier actividad económica.<br>• No tengan sanciones en los últimos dos años por violación a la normativa laboral. Salvo, que teniéndolas las hayan cancelado o bien tengan un convenio de pago vigente. <br>• No hayan realizado despidos colectivos dentro de los seis meses previos a la solicitud de adhesión. <br> • No hayan tenido con el beneficiario relación laboral previa en los últimos tres (3) meses.<br>• No se encuentren cobrando beneficios de otros organismos relacionados al trabajador beneficiario por el presente programa.<br>• El empleador deberá estar inscripto y con sus datos actualizados en el registro de SIPAF que posee el MTEySS. A tal efecto, se deberá cumplimentar el <a href='https://www.santafe.gob.ar/simtyss/portalempleo/pdfs/Formulario_Inscripci%C3%B3n_Actualizaci%C3%B3n_SIPAF_2024.pdf?v=20240228' target='_blank'>formulario</a> de SIPAF junto con la documentación que se detalla en el presente <a href='https://www.santafe.gob.ar/simtyss/portalempleo/pdfs/Instructivo_SIPAF_2024.pdf' target='_blank'>instructivo</a>.<br>• <a href='https://www.santafe.gob.ar/simtyss/portalempleo/pdfs/Terminos_condiciones_EmpleoJoven.pdf?v=20240227' target='_blank'>Leer términos y condiciones completo</a>"
     ],
     opciones: [
-      { text: "Volver a Empleo Joven", next: "empleojoven"},
+      { text: "Volver a Empleo Joven", next: "empleojoven" },
       { text: VOLVER, next: "inicio" }
     ]
   },
 
-  empleojoven_quees: {
-    mensaje: [
-      "<b>Empleo Joven</b> es un programa provincial de intermediación laboral entre personas y empresas que busca favorecer la inserción y estabilidad laboral de las personas, brindando un estímulo económico a la contratación laboral registrada.",
-      "De esta forma, también acompañamos a quienes producen y generan empleo en todo el territorio provincial.",
-      "El estímulo económico es el equivalente al 85% del Salario Mínimo Vital y Móvil y el beneficio se extiende de 4 a 6 meses.",
-      "Si estás buscando empleo, o si estás buscando personal, registrate en el portal accediendo a este <a href='https://www.santafe.gob.ar/simtyss/portalempleo/?home/' target='_blank'>👉&nbsp;Enlace</a>"
-    ],
-    opciones: [
-      { text: "Volver a Empleo Joven", next: "empleojoven"},
-      { text: VOLVER, next: "inicio" }
-    ]
-  },
+
 
 
   // Empleo Joven - FAQ Postulantes
@@ -100,15 +124,8 @@ export const flows = {
       { text: "¿Cómo hago para registrarme y cargar mi CV?", next: "empleojoven_postulantes_01" },
       { text: "Ya tenía cuenta en el Portal, pero cambió el ingreso y no puedo acceder con mi usuario y contraseña.", next: "empleojoven_postulantes_02" },
       { text: "¿Cómo me postulo a un aviso?", next: "empleojoven_postulantes_03" },
-      // { text: "¿Se pueden modificar los datos de mi CV?", next: "empleojoven_postulantes_04" },
-      // { text: "¿Se pueden agregar más datos a mi CV?", next: "empleojoven_postulantes_05" },
-      // { text: "¿El usuario tiene fecha de caducidad?", next: "empleojoven_postulantes_06" },
-      // { text: "Los datos publicados, ¿son de acceso público?", next: "empleojoven_postulantes_07" },
       { text: "¿Cómo busco un aviso?", next: "empleojoven_postulantes_08" },
       { text: "¿Tengo que estar registrado para ver los detalles de un aviso?", next: "empleojoven_postulantes_09" },
-      // { text: "¿Dónde puedo ver los avisos a los que me postulé?", next: "empleojoven_postulantes_10" },
-      // { text: "¿Cómo me contacto con una empresa que publicó un aviso?", next: "empleojoven_postulantes_11" },
-      // { text: "¿Cómo me contacta una empresa que está interesada en mi persona?", next: "empleojoven_postulantes_12" },
       { text: "¿Puedo participar de Empleo Joven más de una vez?", next: "empleojoven_postulantes_13" },
       { text: "Volver a Empleo Joven", next: "empleojoven" }
     ]
@@ -149,42 +166,7 @@ export const flows = {
       { text: VOLVER, next: "inicio" }
     ]
   },
-  // empleojoven_postulantes_04: {
-  //   mensaje: [
-  //     "Se puede revisar, corregir y actualizar tus datos en todo momento en la página web de Portal de Empleo. Te aconsejamos mantener actualizado el CV para que aumenten las posibilidades de ser convocado a una entrevista de trabajo, ya que además la fecha de tu CV se actualiza automáticamente."
-  //   ],
-  //   opciones: [
-  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-  //     { text: VOLVER, next: "inicio" }
-  //   ]
-  // },
-  // empleojoven_postulantes_05: {
-  //   mensaje: [
-  //     "Sólo se puede incluir en el CV la información que Portal de Empleo te solicita."
-  //   ],
-  //   opciones: [
-  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-  //     { text: VOLVER, next: "inicio" }
-  //   ]
-  // },
-  // empleojoven_postulantes_06: {
-  //   mensaje: [
-  //     "Luego de 6 meses, si el sistema no registra ninguna actividad, es decir que no se modificó el CV, ni se realizó ninguna postulación o incluso no se ingresó al sistema, se dará de baja tu CV, previo aviso a tu correo electrónico. Puedes volver a inscribirte en Portal de Empleo todas las veces que lo desees."
-  //   ],
-  //   opciones: [
-  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-  //     { text: VOLVER, next: "inicio" }
-  //   ]
-  // },
-  // empleojoven_postulantes_07: {
-  //   mensaje: [
-  //     "Portal de Empleo asegura a los usuarios que se respetará en todo momento la confidencialidad de sus datos conforme a lo fijado por la Ley 25326 de Protección de Datos Personales y su reglamentación. Por tanto, los datos de los usuarios no serán conocidos por terceros ni exhibidos públicamente en ningún medio."
-  //   ],
-  //   opciones: [
-  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-  //     { text: VOLVER, next: "inicio" }
-  //   ]
-  // },
+
   empleojoven_postulantes_08: {
     mensaje: [
       "Para conocer la oferta de puestos vigentes, ingresá a la sección <b>Busco Trabajo</b>. Podés buscar avisos filtrando la información por localidad o puesto o ver la información completa sin agregar ningún filtro. Una vez que se presiona el botón <b>Buscar</b>, se mostrarán los resultados de la búsqueda.",
@@ -204,33 +186,6 @@ export const flows = {
       { text: VOLVER, next: "inicio" }
     ]
   },
-  // empleojoven_postulantes_10: {
-  //   mensaje: [
-  //     "Ingresando con tu usuario y contraseña, hacé click en tu nombre y luego en la opción <b>Panel de Control</b>. Allí tendrás un seguimiento de todos los puestos a los que te postulaste por medio del sitio."
-  //   ],
-  //   opciones: [
-  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-  //     { text: VOLVER, next: "inicio" }
-  //   ]
-  // },
-  // empleojoven_postulantes_11: {
-  //   mensaje: [
-  //     "Una vez que identifiques un puesto que te interesa, debajo de los detalles tendrás el botón <b>Postularme</b>, si lo presionás el sistema le envía un email a la empresa que lo publicó; indicándole tu postulación y adjuntando tu CV."
-  //   ],
-  //   opciones: [
-  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-  //     { text: VOLVER, next: "inicio" }
-  //   ]
-  // },  
-  // empleojoven_postulantes_12: {
-  //   mensaje: [
-  //     "Una empresa se puede contactar mediante email o telefónicamente, si está interesada en tu perfil laboral para una eventual entrevista."
-  //   ],
-  //   opciones: [
-  //     { text: VOLVER_POSTULANTES, next: "empleojoven_postulantes" },
-  //     { text: VOLVER, next: "inicio" }
-  //   ]
-  // },
   empleojoven_postulantes_13: {
     mensaje: [
       "No. El periodo máximo en el que podés permanecer dentro del programa es de 6 meses, o 12 si tenes discapacidad."
@@ -259,10 +214,8 @@ export const flows = {
       { text: "Si soy monotributista, ¿puedo participar?", next: "empleojoven_empresas_10" },
       { text: "Si no tengo ningún empleado registrado aún, ¿puedo participar?", next: "empleojoven_empresas_11" },
       { text: "¿Hay límite de cantidad de empleados que se pueden adherir?", next: "empleojoven_empresas_12" },
-      // { text: "¿Cuánto demoran los reintegros?", next: "empleojoven_empresas_13" },
       { text: "Si el empleado que contrato cumple 30 durante los 6 meses, ¿puede participar?", next: "empleojoven_empresas_14" },
       { text: "¿Qué pasa si el empleado no cumple las expectativas, puedo desvincularlo antes de los 6 meses?", next: "empleojoven_empresas_15" },
-      // { text: "¿Se puede prorrogar el beneficio?", next: "empleojoven_empresas_16" },
       { text: "Volver a Empleo Joven", next: "empleojoven" },
     ]
   },
@@ -387,15 +340,7 @@ export const flows = {
       { text: VOLVER, next: "inicio" }
     ]
   },
-  // empleojoven_empresas_13: {
-  //   mensaje: [
-  //     "Una vez que la empresa completa la documentación requerida para el reintegro, se estima que la demora es de 20 días hábiles."
-  //   ],
-  //   opciones: [
-  //     { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
-  //     { text: VOLVER, next: "inicio" }
-  //   ]
-  // },
+
   empleojoven_empresas_14: {
     mensaje: [
       "Sí. Debe tener entre 18 y 30 al momento de la adhesión."
@@ -414,18 +359,6 @@ export const flows = {
       { text: VOLVER, next: "inicio" }
     ]
   },
-  // empleojoven_empresas_16: {
-  //   mensaje: [
-  //     "No se puede prorrogar. La duración es la seleccionada al momento de la adhesión. Sí se puede presentar un nueva en cualquier momento."
-  //   ],
-  //   opciones: [
-  //     { text: VOLVER_EMPRESAS, next: "empleojoven_empresas" },
-  //     { text: VOLVER, next: "inicio" }
-  //   ]
-  // },
-
-
-
 
 
 
