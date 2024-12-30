@@ -23,14 +23,14 @@ export const flow_impulsa = {
         ]
     },
     impulsa_oferta: {
-        mensaje: ["Si querés conocer toda la oferta formativa vigente ingresá en este <a href='https://www.santafe.gob.ar/ms/impulsa/oferta-formativa-completa/' target='_blank'>👉&nbsp;Enlace</a>"],
+        mensaje: ["Para conocer toda la oferta formativa vigente ingresá en este <a href='https://www.santafe.gob.ar/ms/impulsa/oferta-formativa-completa/' target='_blank'>👉&nbsp;Enlace</a>"],
         opciones: [
             { text: "Volver a Impulsa", next: "impulsa" },
             { text: VOLVER, next: "inicio" }
         ]
     },
     impulsa_postular: {
-        mensaje: ["Si querés postular una capacitación ingresá en este <a href='https://twww.santafe.gob.ar/simtyss/portalempleo/?menu_subportales/ver_info_programa/1/' target='_blank'>👉&nbsp;Enlace</a> (Sección <b>Santa Fe Capacita</b>)"],
+        mensaje: ["Para postular una capacitación ingresá en este <a href='https://twww.santafe.gob.ar/simtyss/portalempleo/?menu_subportales/ver_info_programa/1/' target='_blank'>👉&nbsp;Enlace</a> (Sección <b>Santa Fe Capacita</b>)"],
         opciones: [
             { text: "Volver a Impulsa", next: "impulsa" },
             { text: VOLVER, next: "inicio" }
