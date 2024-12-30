@@ -15,7 +15,7 @@ export const flow_impulsa = {
             "<b>Impulsa</b> es un programa del gabinete productivo de la Provincia de Santa Fe que busca fortalecer el sector productivo local a través de capacitaciones específicas. Su objetivo es preparar a los santafesinos con habilidades que respondan a las necesidades del mercado laboral y potencien las economías regionales.",
             "La iniciativa mejora la empleabilidad al alinear la formación con las demandas del sector privado, optimizando las matrices productivas y enfocándose en áreas estratégicas clave del territorio provincial.",
             "En colaboración con los Ministerios de Educación, Desarrollo Productivo y Trabajo, Empleo y Seguridad Social, se ofrece una amplia variedad de capacitaciones con certificación oficial en toda la provincia, apoyadas por recursos y espacios de aprendizaje continuo.",
-            "Conocé todo sobre este programa ingresando en este <a href='https://www.santafe.gob.ar/ms/impulsa/' target='_blank'>👉 Enlace</a>"
+            "Conocé todo sobre este programa ingresando en este <a href='https://www.santafe.gob.ar/ms/impulsa/' target='_blank'>👉&nbsp;Enlace</a>"
         ],
         opciones: [
             { text: "Volver a Impulsa", next: "impulsa" },
