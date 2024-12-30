@@ -43,7 +43,7 @@ export const flows = {
   // Otras consultas
   otra: {
     mensaje: [
-      "Para realizar otra consulta ingresá al siguiente <a href='https://wa.me/5493425310158' target='_blank'>👉&nbsp;Enlace</a>"
+      "Para realizar una consulta personalizada vía Whatsapp, ingresá al siguiente <a href='https://wa.me/5493425310158' target='_blank'>👉&nbsp;Enlace</a>"
     ],
     opciones: [
       { text: VOLVER, next: "inicio" }
